@@ -1,0 +1,23 @@
+etcd:
+    image: gcr.io/google_containers/etcd:2.0.9
+    net: host
+    command: /usr/local/bin/etcd --addr=127.0.0.1:4001 --bind-addr=0.0.0.0:4001 --data-dir=/var/etcd/data
+
+master:
+    image: jetstack/hyperkube:v1.1.1-exp
+    net: host
+    pid: host
+    volumes:
+        - /:/rootfs:ro
+        - /var/lib/docker/:/var/lib/docker:rw
+        - /var/run:/var/run:rw
+        - /var/lib/kubelet/:/var/lib/kubelet:rw
+        - /sys:/sys:ro
+        - /var/run/docker.sock:/var/run/docker.sock
+    command: /hyperkube kubelet --api_servers=http://localhost:8080 --v=2 --address=0.0.0.0 --enable_server --hostname_override=127.0.0.1 --config=/etc/kubernetes/manifests --containerized
+
+proxy:
+    image: jetstack/hyperkube:v1.1.1-exp
+    net: host
+    privileged: true
+    command: /hyperkube proxy --master=http://127.0.0.1:8080 --v=2
