@@ -29,7 +29,7 @@ docker run \
   --pid=host \
   -d \
   -v /sys:/sys:ro \
-  -v /var/run:/var/run:rw \ 
+  -v /var/run:/var/run:rw \
   -v /:/rootfs:ro \
   -v /var/lib/docker/:/var/lib/docker:rw \
   -v /var/lib/kubelet/:/var/lib/kubelet:rw \
