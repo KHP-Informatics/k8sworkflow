@@ -2,7 +2,7 @@
 Workflows ontop of Kubernettes
 
 - [Hyperkube](https://hub.docker.com/r/jetstack/hyperkube/)
-- 
+- [JetStack's Getting Started with Kubernettes](https://github.com/jetstack/getting-started-kubernetes)
 
 # k8sworkflow
 Workflows ontop of Kubernettes
