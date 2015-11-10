@@ -9,7 +9,7 @@ Workflows ontop of Kubernettes
 
 Goal: Build a workflow management system ontop of Kubernettes
 
-* Add Gist for nextflow-io/hyperkube
+* Add Gist for jetstack/hyperkube https://hub.docker.com/r/jetstack/hyperkube/
 * Will need to use Kubernettes v1.1.1
 * Run a queueing system as a container
 * 
