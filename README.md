@@ -54,6 +54,6 @@ To interact with the cluster, use the `kubectl` CLI tool. It can be downloaded p
 wget https://storage.googleapis.com/kubernetes-release/release/v1.1.1/bin/linux/amd64/kubectl
 chmod u+x kubectl
 
-kubectl cluster-info
+kubectl clusterinfo
 ```
 
