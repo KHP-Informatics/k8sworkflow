@@ -13,3 +13,13 @@ Goal: Build a workflow management system ontop of Kubernettes
 * Will need to use Kubernettes v1.1.1
 * Run a queueing system as a container
 * 
+
+
+```sh
+docker run \
+-d \
+--net=host \
+--privileged \
+jetstack/hyperkube:v1.1.1-exp \
+/hyperkube proxy --master=http://127.0.0.1:8080 --v=2
+```
